@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Optional Arguments</title>
+<link rel="stylesheet" type="text/css" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+<h1>Optional Arguments (b)</h1>
+
+<div id="message"></div>
+
+<script src="scripts/module2b.js"></script>
+<script>
+/* This module is designed better. We can still admit a single string to be passed
+*/
+Lib.Output.Write("Hello world 1");
+/*
+But we can also pass in an object literal which has a number of benefits. It's a lot easier to read since it is more obvious what each parameter does. The parameters can be listed an any order we like or we can omit the ones we don't
+need whereas in the first version we needed to provide all arguments even if we
+just wanted to change the color.
+*/
+Lib.Output.Write({
+	msg: ["Hello", "world", 2, "from", "JavaScript"],
+	end: 2,
+	color: "#C00"
+});
+</script>
+
+</body>
+</html>
